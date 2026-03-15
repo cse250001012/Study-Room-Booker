@@ -72,7 +72,7 @@ for (let i = 0; i < 4; i++) {
         } else {
             seats.style.backgroundColor = "rgba(75, 172, 210, 0.66)"
         }
-    } // initially the previously selected should be shown
+    } // to show the previously selected seats
 
     for (let value of time_list1) {
         value.addEventListener("click", () => {
@@ -93,7 +93,7 @@ for (let i = 0; i < 4; i++) {
         for (let seats of seat_list1) {
             seats.addEventListener("click", () => {
                 seat_select.classList.remove("select") // to deselect the previously selected seat
-                seats.classList.add("select") //to select the newly selected seat
+                seats.classList.add("select") // to select the newly selected seat
                 seat_select = seats;
                 document.getElementsByClassName('text')[i].innerHTML = "";
 
@@ -114,7 +114,7 @@ for (let i = 0; i < 4; i++) {
                     document.getElementsByClassName('text')[i].innerHTML = `${seat_select.innerHTML} from ${time_select.innerHTML} in ${name} is already occupied.`;
                     document.getElementsByClassName('confirm')[i].style.display = "revert";
                     document.getElementsByClassName('button')[i].style.display = "none"
-                }) // if yes if clicked then the text should be changed and the seat should be occupied
+                }) // if yes is clicked then the text should be changed and the seat should be occupied
             })
         }
 
